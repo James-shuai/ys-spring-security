@@ -1,0 +1,26 @@
+server:
+  port: 8011
+spring:
+  datasource:
+    url: jdbc:mysql://cdb-6z1kjh7u.bj.tencentcdb.com:10217/ceshi?useUnicode=true&characterEncoding=utf8
+    username: root
+    password: yuanshuai0925
+    driver-class-name: com.mysql.jdbc.Driver
+  jpa:
+    show-sql: true
+    database: mysql
+  thymeleaf:
+    cache: false
+
+ys:
+  security:
+    authentication:
+      loginPage: /login.html #自定义登录页面
+      loginProcessingUrl: /login/form #登录表单请求路径，默认/login
+      usernameParameter: name #自定义前端提交用户名 默认username
+      passwordParameter: pwd #自定义前端提交密码 默认password
+      staticPaths: #静态资源/dist/**,/modules/**,/plugins/**
+      - /dist/**
+      - /modules/**
+      - /plugins/**
+      loginResponseType: JSON #认证之后 响应的类型 ：JSON/REDIRECT
