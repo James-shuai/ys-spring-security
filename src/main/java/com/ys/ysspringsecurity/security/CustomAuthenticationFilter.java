@@ -15,11 +15,10 @@ import java.io.InputStream;
 import java.util.Map;
 
 /**
- * 自定义获取用户名密码
+ * 自定义获取用户名密码（此项目未用！！）
  * @author ys
  * @date 2020/4/13 11:36
  */
-
 public class CustomAuthenticationFilter extends UsernamePasswordAuthenticationFilter {
 
   @Override

@@ -11,16 +11,22 @@ spring:
     database: mysql
   thymeleaf:
     cache: false
+  redis:
+    host: 39.96.167.196
+    password: yuanshuai
+    timeout: 2000
+    database: 0
+    port: 6379
 
 ys:
   security:
     authentication:
       loginPage: /login.html #自定义登录页面
-      loginProcessingUrl: /login/form #登录表单请求路径，默认/login
-      usernameParameter: name #自定义前端提交用户名 默认username
-      passwordParameter: pwd #自定义前端提交密码 默认password
+      loginProcessingUrl: /auth/login #登录表单请求路径，默认/login
+      usernameParameter: username #自定义前端提交用户名 默认username
+      passwordParameter: password #自定义前端提交密码 默认password
       staticPaths: #静态资源/dist/**,/modules/**,/plugins/**
-      - /dist/**
+      - /layuimini/**
       - /modules/**
       - /plugins/**
       loginResponseType: JSON #认证之后 响应的类型 ：JSON/REDIRECT
